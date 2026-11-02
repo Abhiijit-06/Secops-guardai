@@ -1,1 +1,0 @@
-IR Playbook: Privilege Escalation. Containment: Revoke all active sessions for the compromised account. Remove any newly granted administrator privileges. Eradication: Delete any rogue scheduled tasks or registry keys created by the attacker. Recovery: Review Active Directory audit logs to verify no persistent backdoors remain.
