@@ -1,0 +1,1 @@
+ALERT: User j.smith@company.com reported a suspicious email originating from billing@IT-support-update[.]com. The email subject is 'URGENT: Unpaid Invoice 9942' and urges the user to click the following link to avoid account suspension: hxxp://credential-harvesting-site[.]net/login.php.
