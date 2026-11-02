@@ -1,1 +1,0 @@
-IR Playbook: Data Exfiltration and Policy Violation. Containment: Terminate the unauthorized data transfer connection. Revoke network access for the offending internal IP. Eradication: Delete the unauthorized data staging archives on the local machine. Recovery: Conduct a data impact assessment to identify what sensitive information was exposed.
