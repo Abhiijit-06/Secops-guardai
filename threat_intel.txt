@@ -1,1 +1,0 @@
-Threat Intelligence Profiles. APT29 typically uses Spearphishing links to gain initial access, often dropping malware with known MD5 signatures. Initial access brokers often use credential stuffing against VPN portals from foreign IP ranges. Known malicious domains include bad-actor-server.com and sketchy-download.ru.
