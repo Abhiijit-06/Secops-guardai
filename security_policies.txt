@@ -1,0 +1,1 @@
+Security Policy Excerpts. All incidents involving potential data exfiltration must be reported to the Data Protection Officer within 72 hours. Remote access requires MFA. Unrecognized executable files must be analyzed in a sandbox before execution on corporate assets.
