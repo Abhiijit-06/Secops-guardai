@@ -1,0 +1,1 @@
+IR Playbook: Phishing. Containment: Block the sender email address at the email gateway. Quarantine any delivered emails in the target inboxes. Eradication: Reset the passwords for any users who clicked the link. Recovery: Monitor the accounts for 24 hours for suspicious logins.

@@ -1,0 +1,1 @@
+IR Playbook: Brute Force and Suspicious Login. Containment: Temporarily disable the targeted user account. Block the source IP address at the firewall. Eradication: Require the user to complete a mandatory password reset and enforce Multi-Factor Authentication (MFA). Recovery: Audit VPN and login logs to ensure no successful unauthorized access occurred.
