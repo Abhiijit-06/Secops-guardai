@@ -1,0 +1,112 @@
+SECOPS-GUARDAI:
+
+
+An AI-powered Security Operations Center (SOC) alert triage assistant built with Python, Retrieval-Augmented Generation (RAG), and the Gemini API.
+SecOps GuardAI helps SOC analysts investigate security alerts by extracting Indicators of Compromise (IoCs), classifying threats, assessing severity, and generating mitigation recommendations grounded in a knowledge base of security playbooks and policies.
+
+Features:
+
+- IoC Extraction: Identifies IP addresses, URLs, domains, email addresses, and file hashes from raw alert text.
+- Threat Classification: Classifies alerts by threat vector and severity.
+- MITRE ATT&CK Mapping: Associates incidents with relevant MITRE ATT&CK tactics.
+- RAG-Based Knowledge Retrieval: Uses ChromaDB to retrieve relevant security playbooks and policies.
+- Grounded Mitigation Recommendations: Generates response steps supported by retrieved knowledge-base documents.
+- Guardrails: Uses retrieval and grounding checks to avoid generating unsupported recommendations.
+- Incident Tracking: Records analysis results and provides incident statistics through the CLI.
+
+Architecture:
+
+The application follows a Retrieval-Augmented Generation (RAG) pipeline:
+
+1. Accepts raw security alert text.
+2. Extracts Indicators of Compromise.
+3. Retrieves relevant security documents from the ChromaDB knowledge base.
+4. Uses the Gemini API for threat classification and mitigation generation.
+5. Applies guardrails to check whether recommendations are sufficiently grounded.
+6. Produces an incident analysis through the command-line interface.
+
+Tech Used:
+
+- Python
+- Google Gemini API
+- LangChain
+- ChromaDB
+- Sentence Transformers (`all-MiniLM-L6-v2`)
+- MITRE ATT&CK
+
+
+Installation:
+
+
+Requirements: Python 3.12.3 or later.
+
+1. Clone the repository:
+
+git clone https://github.com/Abhijit-06/Secops-guardai.git
+cd Secops-guardai
+
+
+2. Create and activate a virtual environment:
+
+python -m venv venv
+
+
+Windows:
+
+powershell
+venv\Scripts\activate
+
+
+3. Install dependencies:
+
+pip install -r requirements.txt
+pip install langchain-text-splitters
+
+
+API Config:
+
+
+SecOps GuardAI uses the Google Gemini API.
+
+Set your API key as an environment variable:
+
+PowerShell
+
+$env:GOOGLE_API_KEY="YOUR_API_KEY"
+
+Alternatively, create a local `.env` file using `.env.example` as a reference.
+
+
+Useage:
+
+
+1.Check the environment and API configuration:
+
+python -m guardai.cli check
+
+
+
+2.Ingest the knowledge base:
+
+python -m guardai.cli ingest
+
+
+
+3.Analyze a sample alert:
+
+python -m guardai.cli analyze data/sample_alerts/bruteforce_vpn.txt --verbose
+
+
+
+4.Other sample alerts:
+
+python -m guardai.cli analyze data/sample_alerts/phishing_invoice.txt --verbose
+python -m guardai.cli analyze data/sample_alerts/malware_ransomware.txt --verbose
+
+
+View incident statistics:
+
+
+python -m guardai.cli stats
+
+
